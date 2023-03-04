@@ -57,12 +57,9 @@ jobs:
       - name: Install dependencies
         run: npm i --ignore-scripts
 
-      - name: node version
-        run: node -v && npm -v
-
       - name: Run tests
         run: |
-          npm i npm@7.0.0
+          npm i -g npm@7.0.0
           npm run test-ci
           
 
