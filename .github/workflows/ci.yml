@@ -57,11 +57,12 @@ jobs:
       - name: Install dependencies
         run: npm i --ignore-scripts
 
+      - name: Switch NPM version
+        if: ${{ matrix.node-version == 14 }}
+        run: npm i -g npm@7.0.0
+
       - name: Run tests
-        run: |
-          npm i -g npm@7.0.0
-          npm run test-ci
-          
+        run: npm run test-ci
 
   automerge:
     name: Automerge Dependabot PRs
