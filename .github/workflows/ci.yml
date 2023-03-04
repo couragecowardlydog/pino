@@ -59,7 +59,7 @@ jobs:
 
       - name: Switch NPM version
         if: ${{ matrix.node-version == 14 }}
-        run: npm i -g npm@7.0.0
+        run: npm i -g npm@latest
 
       - name: Run tests
         run: npm run test-ci
