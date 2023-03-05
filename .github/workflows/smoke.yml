@@ -1,9 +1,9 @@
-name: CI
+name: smoke
 
 on:
   push:
     branches:
-      - master
+      - main
     paths-ignore:
         - 'docs/**'
         - '*.md'
@@ -31,7 +31,7 @@ jobs:
         node-version: [14, 16, 18, 19]
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Install dependencies
         run: npm install
 
