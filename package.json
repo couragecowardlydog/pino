@@ -17,7 +17,8 @@
     "test",
     "docs",
     "example.js",
-    "lib"
+    "lib",
+    "smoke.js"
   ],
   "scripts": {
     "docs": "docsify serve",
