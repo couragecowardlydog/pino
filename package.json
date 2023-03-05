@@ -15,6 +15,7 @@
     "pretty.js",
     "usage.txt",
     "test",
+    "smoke.js",
     "docs",
     "example.js",
     "lib"
@@ -24,6 +25,7 @@
     "browser-test": "airtap --local 8080 test/browser*test.js",
     "lint": "eslint .",
     "prepublishOnly": "tap --no-check-coverage test/internals/version.test.js",
+    "smoker": "node ./node_modules/.bin/smoker test-ci-smoke",
     "test": "npm run lint && npm run transpile && tap --ts && jest test/jest && npm run test-types",
     "test-ci": "npm run lint && npm run transpile && tap --ts --no-check-coverage --coverage-report=lcovonly && npm run test-types",
     "test-ci-pnpm": "pnpm run lint && npm run transpile && tap --ts --no-coverage --no-check-coverage && pnpm run test-types",
