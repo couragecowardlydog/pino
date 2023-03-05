@@ -57,12 +57,13 @@ jobs:
       - name: Install dependencies
         run: npm i --ignore-scripts
 
-      - name: Switch NPM version
-        if: ${{ matrix.node-version == 14 }}
-        run: npm i -g npm@latest
-
       - name: Run tests
         run: npm run test-ci
+
+      - name: Run smoke
+        uses: boneskull/nodejs-production-test-action@v1
+        with:
+          script: smoker
 
   automerge:
     name: Automerge Dependabot PRs
