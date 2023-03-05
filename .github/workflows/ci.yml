@@ -63,7 +63,7 @@ jobs:
       - name: Run smoke
         uses: boneskull/nodejs-production-test-action@v1
         with:
-          script: smoker
+          script: test-ci-smoke
 
   automerge:
     name: Automerge Dependabot PRs
